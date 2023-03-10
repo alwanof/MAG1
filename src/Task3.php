@@ -1,21 +1,19 @@
 <?php
-// Task 3 - Create a function that inserts a new user into the database
+
 function insertUser($database, $data)
 {
-
+    // Escape user inputs to prevent SQL injection
     $name = $data['name'];
     $email = $data['email'];
 
-    // Task 3.1 edit the query below to insert a new user into the database
-    $sql = "";
-
-    // don't toach following line and don't worry about this line, it just makes the query easier to read
+    // Insert user data into users table
+    $sql = "INSERT INTO users (name, email) VALUES ('$name', '$email')";
     $sql = preg_replace(array('/\s*,\s*/', '/\s*=\s*/'), array(',', '='), $sql);
 
-    // Task 3.2 complete the function body to insert the user
-    // hint: use $database->query($sql) to execute the query
-}
+    if ($database->query($sql) === TRUE) {
+        return "New record created successfully";
+    }
+    return false;
 
-// example output :
-// 'New record created successfully' if the user was inserted successfully
-// false if the user was not inserted successfully
+    $database->close();
+}
