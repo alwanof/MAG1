@@ -13,7 +13,7 @@ function getUsers($database)
      // hint: use fetch_assoc to get the result row
      $result = $database->query($query);
      if(!$result){
-          die('Query Error ('.$database->connect_errno().')' .$database->connect_errno() );
+          die('Query Error ('.$database->errno ().')' .$database->error() );
      }
      $users=[];
      while($row = $result->fetch_assoc()){
