@@ -16,7 +16,7 @@ function insertUser($database, $data)
     // hint: use $database->query($sql) to execute the query
     $result = $database->query($sql);
     if(!$result){
-        die('Query Error ('.$database->error().') ' . $database->error());
+        die('Query Error ('.$database->connect_errno().') ' . $database->connect_errno());
     }
     $res=null;
     if($database->query($result)){

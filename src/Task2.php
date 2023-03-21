@@ -12,7 +12,7 @@ function getUserById($database, $userId)
     // hint: use fetch_assoc to get the result row
     $result = $database->query($query);
      if(!$result){
-          die('Query Error ('.$database->error().')' .$database->error() );
+          die('Query Error ('.$database->connect_errno().')' .$database->connect_errno() );
      }
      $user=[];
      while($row = $result->fetch_assoc() ){
