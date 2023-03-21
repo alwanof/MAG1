@@ -10,7 +10,7 @@ function getUserById($database, $userId)
 
     // Task 1.2 complete the function body to return the users
     // hint: use fetch_assoc to get the result row
-    $result = $database->querey($query);
+    $result = $database->query($query);
      if(!$result){
           die('Query Error ('.$database->error().')' .$database->error() );
      }
