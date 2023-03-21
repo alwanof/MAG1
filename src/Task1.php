@@ -11,8 +11,12 @@ function getUsers($database)
 
      // Task 1.2 complete the function body to return the users
      // hint: use fetch_assoc to get the result row
-     $result = $database->query($query);
-     return $result->fetch_assoc()
+	 $result = $database->query($query);
+	 $rows = [];
+	 while($row = $result->fetch_assoc())
+		 $rows[] = $row;
+	 return $rows;
+
 }
 
 // example output of getUsers($database) 2 rows
