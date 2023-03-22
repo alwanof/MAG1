@@ -16,7 +16,7 @@ function searchUsersByName($database, $name)
      if ($result->num_rows > 0) {
   
   while($row = $result->fetch_assoc()) {
-    echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+    echo  $row["id"] . $row["firstname"]. " " . $row["email"]. "<br>";
   }
 } else {
   echo "0 results";
