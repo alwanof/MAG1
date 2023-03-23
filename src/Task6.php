@@ -1,4 +1,5 @@
 <?php
+
 function searchUsersByName($database, $name)
 {
      // Query the database for user data
