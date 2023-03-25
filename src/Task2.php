@@ -5,11 +5,6 @@ function getUserById($database, $userId)
     // Prepare the query and bind the user ID parameter
     // Task 2.1 edit the query below to return a user by their ID
     $query = "SELECT * FROM users WHERE id =". $userId;
-    $stmt = $database->prepare($sql);
-    $stmt->bindParam(':userId', $userId);
-    $stmt->execute();
-    $user = $stmt->fetch(PDO::FETCH_ASSOC);
-    return $user ? $user : null;
     
     
     
@@ -18,7 +13,12 @@ function getUserById($database, $userId)
 
     // Task 1.2 complete the function body to return the users
     // hint: use fetch_assoc to get the result row
-
+    $result=$database->query($query);
+     $users=[];
+     while($row=$result->fatch_assac()){
+          $users[]=$row
+          }
+    
 }
 
 //example output of getUsers($database) 1 row
