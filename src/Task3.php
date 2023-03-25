@@ -18,7 +18,7 @@ function insertUser($database, $data)
   $last_id = $conn->insert_id;
   echo "New record created successfully ";
 } else {
-  echo "Error: " ;
+  echo "false " ;
 }
 
 }
