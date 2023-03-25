@@ -14,7 +14,7 @@ function removeUser($database, $id)
 if ($conn->query($sql) === TRUE) {
   echo "Record deleted successfully";
 } else {
-  echo "Error deleting record: " . $conn->error;
+  echo "false " ;
 }
 
 $conn->close();
