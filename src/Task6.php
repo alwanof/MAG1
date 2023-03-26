@@ -14,8 +14,7 @@ function searchUsersByName($database, $name)
      // hint : use $database->query($query) to execute the query
      // hint: use fetch_assoc to get the result row
 
-$sql = "SELECT * FROM users WHERE name LIKE'%Doe%'";
-$result = $database->query($sql);
+$result = $database->query($query);
 
   while($row = $result->fetch_assoc()) {
     echo . $row["name"]. "<br>";
