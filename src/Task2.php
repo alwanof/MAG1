@@ -10,12 +10,9 @@ function getUserById($database, $userId)
 
     // Task 1.2 complete the function body to return the users
     // hint: use fetch_assoc to get the result row
-    if ($database->connect_error) {
-  die("Connection failed: " . $database->connect_error);
-}
+ 
 
-$userId = "SELECT *FROM users WHERE id = ?";
-$result = $database->query($userId);
+$result = $database->query($query);
     
     while($row = $result->fetch_assoc()) {
     echo . $row["id"]."<br>" ;
