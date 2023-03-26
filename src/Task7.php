@@ -15,7 +15,7 @@ function getUsersWithOrderQuantity($database)
     
 $sql = $query;
 $result = $database->query($sql);
-
+     
   while($row = $result->fetch_assoc()) {
     echo . $row["total_quantity"]. "<br>";
   }
