@@ -13,9 +13,6 @@ function searchUsersByName($database, $name)
      // Task 6.2 complete the function body to return the users
      // hint : use $database->query($query) to execute the query
      // hint: use fetch_assoc to get the result row
-     if ($database->connect_error) {
-  die("Connection failed: " . $database->connect_error);
-}
 
 $sql = "SELECT * FROM users WHERE name LIKE'%Doe%'";
 $result = $database->query($sql);
