@@ -20,7 +20,7 @@ function insertUser($database, $data)
 		return 'New record created successfully';
 	else
 		return false;
-}
+
 }
 
 // example output :
