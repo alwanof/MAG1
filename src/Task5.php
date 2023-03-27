@@ -13,7 +13,7 @@ function removeUser($database, $id)
     // hint: use $database->query($sql) to execute the query
     $result = $database->query($sql);
     $res =null;
-    if($database->query($result)){
+    if($result == true){
         $res= 'Record removed successfully';
     }else{
         $res = false;
