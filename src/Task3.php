@@ -7,13 +7,19 @@ function insertUser($database, $data)
     $email = $data['email'];
 
     // Task 3.1 edit the query below to insert a new user into the database
-    $sql = "";
+    $sql = "INSERT INTO users VALUES (new_id, new_name, new_email@gmail.com)";
 
     // don't toach following line and don't worry about this line, it just makes the query easier to read
     $sql = preg_replace(array('/\s*,\s*/', '/\s*=\s*/'), array(',', '='), $sql);
 
     // Task 3.2 complete the function body to insert the user
     // hint: use $database->query($sql) to execute the query
+    $result = $database ->query($query);
+     if (!result) {
+          die('false (' .$database->errno .') ' . $database->error);
+     } else {
+        return "New record created successfully";
+     }
 }
 
 // example output :
