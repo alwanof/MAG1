@@ -7,8 +7,8 @@ function updateUser($database, $data, $id)
     $email = $data['email'];
     // Task 4.1 edit the query below to update a user in the database
     $sql = UBDATE users
-        SET email 'bashir.alrayes1@gmail.com',
-        name 'Bashir alrayes'
+        SET email ='bashir.alrayes1@gmail.com',
+        name ='Bashir alrayes'
             where id=1;
     
 
