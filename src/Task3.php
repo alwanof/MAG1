@@ -9,7 +9,7 @@ function insertUser($database, $data)
     // Task 3.1 edit the query below to insert a new user into the database
     $sql = "";
     $sql = "INSERT INTO users (name, email)
-     VALUES ('Bashir', 'Alrayes', 'bashir.freedom@gmail.com')";
+     VALUES ('Bashir','bashir.freedom@gmail.com')";
     
 
     // don't toach following line and don't worry about this line, it just makes the query easier to read
