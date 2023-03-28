@@ -20,7 +20,7 @@ function getUserById($database, $userId)
  
      $ret = $prepa->get_result();
 
-     return $ret->fetch->assoc();
+     return $ret->fetch_assoc();
    
 }
 
