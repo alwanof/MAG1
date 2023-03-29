@@ -4,7 +4,7 @@
 function getUsersWithOrderQuantity($database)
 {
      // Task 7.1 edit the query below to return a list of users with the total quantity of orders they have made
-     $query = "SELECT users.id, users.name, users.email, GROUP BY orders.quantity as total_quantity FROM users, orders";
+     $query = "SELECT users.name, SUM(orders.quantity) AS total_ammount, COUNT(orders.id) AS count_orders FROM orders JOIN orders on users.id=order.user_id GROUP BY users.name";
 
      // don't toach following line and don't worry about this line, it just makes the query easier to read
      $query = preg_replace(array('/\s*,\s*/', '/\s*=\s*/'), array(',', '='), $query);
@@ -13,11 +13,13 @@ function getUsersWithOrderQuantity($database)
      // hint : use $database->query($query) to execute the query
      // hint: use fetch_assoc to get the result rows
       $result = $database ->query($query);
-     if (result[]) {
+     if (!$result[]) {
           die('false (' .$database->errno .') ' . $database->error);
-     } else {
-        return $users;
-     }
+     $users = [];
+          while($row =$result->fetch_assoc()){
+          $users[] = $row;
+          }
+          return $users;
 }
 
 }
