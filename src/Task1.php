@@ -11,13 +11,13 @@ function getUsers($database)
 
      // Task 1.2 complete the function body to return the users
      // hint: use fetch_assoc to get the result row
-     $result = $database ->query($query);
-     if (!result) {
+     $result = $database->query($query);
+     if (!$result) {
           die('Query Error (' .$database->errno .') ' . $database->error);
      }
      $users = [];
-     while($row = $result->fetchassoc()) {
-          $users=$row;
+     while($row = $result->fetch_assoc()) {
+          $users [] = $row;
      }
      return $users;
 }
