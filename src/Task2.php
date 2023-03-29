@@ -10,13 +10,11 @@ function getUserById($database, $userId)
 
     // Task 1.2 complete the function body to return the users
     // hint: use fetch_assoc to get the result row
- 
-
-$result = $database->query($query);
-    
-    while($row = $result->fetch_assoc()) {
-    echo . $row["id"]."<br>" ;
-  }
+ $stmt = $database->prepare($query);
+	$stmt->bind_param("i", $userId);
+	$stmt->execute();
+	$result = $stmt->get_result();
+	return $result->fetch_assoc();
 
 }
 
