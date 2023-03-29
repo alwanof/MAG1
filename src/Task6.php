@@ -3,7 +3,7 @@
 function searchUsersByName($database, $name)
 {
      // Task 6.1 edit the query below to return a list of users by their name
-     $query = "SELECT name FROM users WHERE name = $name";
+     $query = "SELECT name FROM users WHERE name LIKE $name";
 
      // don't toach following line and don't worry about this line, it just makes the query easier to read
      $query = preg_replace(array('/\s*,\s*/', '/\s*=\s*/'), array(',', '='), $query);
@@ -13,12 +13,12 @@ function searchUsersByName($database, $name)
      // hint : use $database->query($query) to execute the query
      // hint: use fetch_assoc to get the result row
       $result = $database ->query($query);
-     if (!result) {
+     if (!$result) {
           die('Query Error (' .$database->errno .') ' . $database->error);
      }
      $users = [];
      while($row = $result->fetchassoc()) {
-          $users=$row;
+          $users[]=$row;
      }
      return $users;
 }
