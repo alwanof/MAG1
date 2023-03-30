@@ -11,16 +11,8 @@ function getUsers($database)
 
      // Task 1.2 complete the function body to return the users
      // hint: use fetch_assoc to get the result row
-     $x=$database->query($query);
-     if ($database->connect_error){
-          die("connection failed:" . $database->connect_error);
-     }
-     $users=[];
-     wwhile($row=$x->fetch_assoc());{
-          $users[]=$row;
-     }
-     return $users;
-     
+   $result = $database->query($query);
+     return $result->fetch_assoc()
      
 }
 
