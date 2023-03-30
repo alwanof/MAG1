@@ -11,12 +11,12 @@ function removeUser($database, $id)
 
     // Task 5.2 complete the function body to remove the user
     // hint: use $database->query($sql) to execute the query
-$result = $database->query($sql);
+      $result = $database->query($sql);
 	if($result)
 		return 'Record removed successfully';
 	else
 		return false;
-}
+
 }
 // example output :
 // 'Record removed successfully' if the user was removed successfully
