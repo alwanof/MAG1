@@ -20,8 +20,6 @@ function updateUser($database, $data, $id)
         return "Record updated successfully";
      }
 }
-
-}
 // example output :
 // 'Record updated successfully' if the user was updated successfully
 // false if the user was not updated successfully
