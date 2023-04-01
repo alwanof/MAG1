@@ -3,7 +3,8 @@
 function searchUsersByName($database, $name)
 {
      // Task 6.1 edit the query below to return a list of users by their name
-     $query = "";
+     $query = "SELECT * FROM users
+               WHERE name LIKE 'John' ";
 
      // don't toach following line and don't worry about this line, it just makes the query easier to read
      $query = preg_replace(array('/\s*,\s*/', '/\s*=\s*/'), array(',', '='), $query);
