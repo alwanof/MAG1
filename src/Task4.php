@@ -15,11 +15,17 @@ function updateUser($database, $data, $id)
 
     // Task 4.2 complete the function body to update the user
     // hint: use $database->query($sql) to execute the query
-
-}
-if ($sql = 1 ) {
-        echo 'Record updated successfully';
+    
+ $result = $database -> query ($query); 
+     if ( !$result) {
+        die ('Quary Error ( '.$database -> error .')'.$database -> error ); 
+         
+    if ($sql = 1 ) {
+        echo 'New record created successfully';
     } 
+        
+}
+
 // example output :
 // 'Record updated successfully' if the user was updated successfully
 // false if the user was not updated successfully
