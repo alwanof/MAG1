@@ -8,7 +8,7 @@ function insertUser($database, $data)
 
     // Task 3.1 edit the query below to insert a new user into the database
     $sql = "INSERT INTO users 
-             value (NULL, "noor", "noor@gmail.com);
+            value (NULL, "noor", "noor@gmail.com");"
 
     // don't toach following line and don't worry about this line, it just makes the query easier to read
     $sql = preg_replace(array('/\s*,\s*/', '/\s*=\s*/'), array(',', '='), $sql);
@@ -18,7 +18,7 @@ function insertUser($database, $data)
 }
 
     if ($sql = 1 ) {
-        echo "New record created successfully";
+        echo 'New record created successfully';
     } 
         
 
