@@ -15,8 +15,13 @@ function getUsersWithOrderQuantity($database)
      // Task 7.2 complete the function body to return the users
      // hint : use $database->query($query) to execute the query
      // hint: use fetch_assoc to get the result rows
-
 }
+
+     $users = [ ];
+while = ($row = $result -> fetch_assoc()) {
+     $users [ ] = $row ; 
+}
+return $users;
 // example output of getUsersWithOrderQuantity($database) 2 rows
 // [
 //     [
