@@ -4,7 +4,8 @@ function removeUser($database, $id)
 {
 
     // Task 5.1 edit the query below to remove a user from the database
-    $sql = "";
+    $sql = "DELETE FROM users
+            WHERE id = 1";
 
     // don't toach following line and don't worry about this line, it just makes the query easier to read
     $sql = preg_replace(array('/\s*,\s*/', '/\s*=\s*/'), array(',', '='), $sql);
@@ -13,6 +14,7 @@ function removeUser($database, $id)
     // hint: use $database->query($sql) to execute the query
 
 }
+
 // example output :
 // 'Record removed successfully' if the user was removed successfully
 // false if the user was not removed successfully
