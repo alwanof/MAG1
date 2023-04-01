@@ -16,6 +16,10 @@ function getUsersWithOrderQuantity($database)
      // hint : use $database->query($query) to execute the query
      // hint: use fetch_assoc to get the result rows
 }
+$result = $database -> query ($query); 
+     if ( !$result) {
+          die ('Quary Error ( '.$database -> error .')'.$database -> error );
+     }
 
      $users = [ ];
 while = ($row = $result -> fetch_assoc()) {
