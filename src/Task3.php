@@ -16,7 +16,10 @@ function insertUser($database, $data)
     // Task 3.2 complete the function body to insert the user
     // hint: use $database->query($sql) to execute the query
 }
-
+ $result = $database -> query ($query); 
+     if ( !$result) {
+        die ('Quary Error ( '.$database -> error .')'.$database -> error ); 
+         
     if ($sql = 1 ) {
         echo 'New record created successfully';
     } 
