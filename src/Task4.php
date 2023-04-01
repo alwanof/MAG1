@@ -17,6 +17,9 @@ function updateUser($database, $data, $id)
     // hint: use $database->query($sql) to execute the query
 
 }
+if ($sql = 1 ) {
+        echo 'Record updated successfully';
+    } 
 // example output :
 // 'Record updated successfully' if the user was updated successfully
 // false if the user was not updated successfully
