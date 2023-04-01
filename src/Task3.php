@@ -17,7 +17,7 @@ function insertUser($database, $data)
     // hint: use $database->query($sql) to execute the query
 }
 
-    if ($sql != 0 ) {
+    if ($sql = 1 ) {
         echo "New record created successfully";
     } 
         
