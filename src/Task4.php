@@ -6,13 +6,14 @@ function updateUser($database, $data, $id)
     $name = $data['name'];
     $email = $data['email'];
     // Task 4.1 edit the query below to update a user in the database
-    $sql = "";
+    $sql = "UPDATE users SET name='$name', email='$email' WHERE id=$id";
 
     // don't toach following line and don't worry about this line, it just makes the query easier to read
     $sql = preg_replace(array('/\s*,\s*/', '/\s*=\s*/'), array(',', '='), $sql);
 
     // Task 4.2 complete the function body to update the user
     // hint: use $database->query($sql) to execute the query
+    $result = $database->query($sql);
 
 }
 // example output :
